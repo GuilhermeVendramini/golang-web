@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Data Slice</title>
+	</head>
+	<body>
+		<ul>
+			{{range $index, $element := .}}
+				<li>{{$index}} - {{$element}}</li>
+			{{end}}
+		</ul>
+	</body>
+</html>
