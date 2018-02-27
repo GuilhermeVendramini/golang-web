@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Func</title>
+	</head>
+	<body>
+		{{range .Wisdom}}
+
+		{{if .Name | isbu}}
+		YES... {{ .Name}} is here!
+		{{ else }}
+		No... here is {{ .Name}}!
+		{{end}}
+
+		{{if not (.Name | isbu)}}
+		No... here is {{ .Name}}!
+		{{end}}
+
+		{{if and (.Name | isbu) .Admin}}
+		I'm admin {{ .Name}}!
+		{{end}}
+
+
+		{{end}}
+	</body>
+</html>
